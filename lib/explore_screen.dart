@@ -10,8 +10,10 @@ import 'package:e_commerce_app/data/fresh_produce/vegetable_data.dart';
 import 'package:e_commerce_app/data/meat/meat_seafood_data.dart';
 import 'package:e_commerce_app/data/pantry_staples/pantry_staple_data.dart';
 import 'package:e_commerce_app/data/snacks_sweets/snacks_sweets.dart';
+import 'package:e_commerce_app/product_screens/fruit_screen.dart';
 import 'package:e_commerce_app/products_list.dart';
 import 'package:easy_search_bar/easy_search_bar.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class ExploreScreen extends StatefulWidget {
@@ -65,7 +67,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
       body: Padding(
         padding: const EdgeInsets.all(10),
         child: ListView.builder(
-          itemCount: (dataCategory.length / 2).ceil() - 1,
+          itemCount: (dataCategory.length / 2).ceil(),
           itemBuilder: (context, index) {
             return Row(
               children: [
@@ -74,9 +76,10 @@ class _ExploreScreenState extends State<ExploreScreen> {
                     onTap: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) {
-                        return ProductsListScreen(
-                          product: dataCategory[index],
-                        );
+                        return dataCategory[index * 2]['screen'];
+                        // ProductsListScreen(
+                        //   product: dataCategory[index * 2],
+                        // );
                       }));
                     },
                     child: Card(
@@ -128,9 +131,10 @@ class _ExploreScreenState extends State<ExploreScreen> {
                     onTap: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) {
-                        return ProductsListScreen(
-                          product: dataCategory[index],
-                        );
+                        return dataCategory[index * 2 + 1]['screen'];
+                        // ProductsListScreen(
+                        //   product: dataCategory[index * 2 + 1],
+                        // );
                       }));
                     },
                     child: Card(

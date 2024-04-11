@@ -6,7 +6,7 @@ void main() {
   runApp(MaterialApp(
     home: MyNavigationBar(),
     theme: ThemeData(
-      primarySwatch: Colors.green, // Change primarySwatch to green
+      primarySwatch: Colors.green, 
     ),
   ));
 }

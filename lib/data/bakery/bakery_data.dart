@@ -8,7 +8,7 @@ List<Map<String, dynamic>> bakeryBreadData = [
         'https://i.pinimg.com/474x/8c/ea/8c/8cea8cbdd8bbcd989b7d07349c82e7e0.jpg',
   },
   {
-    'product_name': 'Whole Wheat Bread Loaf',
+    'product_name': ' Wheat Bread Loaf',
     'price': 100,
     'weight': '400g',
     'origin': 'Local Bakeries, Pakistan',
@@ -26,7 +26,7 @@ List<Map<String, dynamic>> bakeryBreadData = [
   {
     'product_name': 'Croissants',
     'price': 20,
-    'quantity': '1 piece',
+    'weight': '200g',
     'origin': 'Local Bakeries, Pakistan',
     'product_link':
         'https://i.pinimg.com/474x/76/15/16/761516543db4e3a85bbae9de0eeb0c75.jpg',
@@ -34,7 +34,7 @@ List<Map<String, dynamic>> bakeryBreadData = [
   {
     'product_name': 'Pita Bread',
     'price': 30,
-    'quantity': '1 piece',
+    'weight': '1 piece',
     'origin': 'Local Bakeries, Pakistan',
     'product_link':
         'https://i.pinimg.com/474x/8c/48/77/8c48774cc431eee4a931886367d97dc6.jpg',
@@ -42,7 +42,7 @@ List<Map<String, dynamic>> bakeryBreadData = [
   {
     'product_name': 'Naan Bread',
     'price': 15,
-    'quantity': '1 piece',
+    'weight': '1 piece',
     'origin': 'Local Bakeries, Pakistan',
     'product_link':
         'https://i.pinimg.com/474x/f2/28/b9/f228b94eca9321ce6c36a0253d333178.jpg',
@@ -50,7 +50,7 @@ List<Map<String, dynamic>> bakeryBreadData = [
   {
     'product_name': 'Rusks',
     'price': 40,
-    'quantity': '6 pieces',
+    'weight': '6 pieces',
     'origin': 'Local Bakeries, Pakistan',
     'product_link':
         'https://i.pinimg.com/474x/e7/52/f4/e752f4e4a068f4dd3dca7e2a4dac9dd9.jpg',
@@ -82,7 +82,7 @@ List<Map<String, dynamic>> bakeryBreadData = [
   {
     'product_name': 'Sandwich',
     'price': 25,
-    'quantity': '1 piece',
+    'weight': '1 piece',
     'origin': 'Local Bakeries, Pakistan',
     'product_link':
         'https://i.pinimg.com/474x/bd/48/59/bd4859d8c8898bb1dd091afd0398b4ed.jpg',
@@ -90,7 +90,7 @@ List<Map<String, dynamic>> bakeryBreadData = [
   {
     'product_name': 'Biscuits',
     'price': 60,
-    'quantity': '6 pieces',
+    'weight': '6 pieces',
     'origin': 'Local Bakeries, Pakistan',
     'product_link':
         'https://i.pinimg.com/474x/76/19/2e/76192eec2b522e5075c01213e7dd89f5.jpg',
@@ -106,7 +106,7 @@ List<Map<String, dynamic>> bakeryBreadData = [
   {
     'product_name': 'Pastery',
     'price': 30,
-    'quantity': '1 piece',
+    'weight': '1 piece',
     'origin': 'Local Bakeries, Pakistan',
     'product_link':
         'https://i.pinimg.com/474x/30/1c/0e/301c0e3748bc5d43a3a52c574b89a26e.jpg',

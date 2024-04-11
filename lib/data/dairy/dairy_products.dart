@@ -2,7 +2,7 @@ List<Map<String, dynamic>> dairyAndEggsDataPakistan = [
   {
     'product_name': 'Fresh Milk',
     'price': 120,
-    'volume': '1 liter',
+    'weight': '1 liter',
     'origin': 'Local Dairy Farms, Pakistan',
     'freshness_indicator': 'Pasteurized and homogenized',
     'product_link':
@@ -29,7 +29,7 @@ List<Map<String, dynamic>> dairyAndEggsDataPakistan = [
   {
     'product_name': 'Eggs',
     'price': 120,
-    'quantity': '1 dozen',
+    'weight': '1 dozen',
     'origin': 'Local Poultry Farms, Pakistan',
     'freshness_indicator': 'Grade A, fresh from the farm',
     'product_link':
@@ -65,7 +65,7 @@ List<Map<String, dynamic>> dairyAndEggsDataPakistan = [
   {
     'product_name': 'Fresh Cream',
     'price': 150,
-    'volume': '200ml',
+    'weight': '200ml',
     'origin': 'Local Dairy Producers, Pakistan',
     'freshness_indicator': 'Rich and smooth',
     'product_link':
@@ -83,7 +83,7 @@ List<Map<String, dynamic>> dairyAndEggsDataPakistan = [
   {
     'product_name': 'Lassi',
     'price': 60,
-    'volume': '500ml',
+    'weight': '500ml',
     'origin': 'Local Dairy Producers, Pakistan',
     'freshness_indicator': 'Refreshing and creamy',
     'product_link':
@@ -119,7 +119,7 @@ List<Map<String, dynamic>> dairyAndEggsDataPakistan = [
   {
     'product_name': 'Egg Whites',
     'price': 100,
-    'quantity': '500ml',
+    'weight': '500ml',
     'origin': 'Local Poultry Farms, Pakistan',
     'freshness_indicator': 'Fresh and protein-rich',
     'product_link':
@@ -128,7 +128,7 @@ List<Map<String, dynamic>> dairyAndEggsDataPakistan = [
   {
     'product_name': 'Egg Yolks',
     'price': 120,
-    'quantity': '500ml',
+    'weight': '500ml',
     'origin': 'Local Poultry Farms, Pakistan',
     'freshness_indicator': 'Rich and creamy',
     'product_link':
@@ -137,7 +137,7 @@ List<Map<String, dynamic>> dairyAndEggsDataPakistan = [
   {
     'product_name': 'Buttermilk',
     'price': 70,
-    'volume': '500ml',
+    'weight': '500ml',
     'origin': 'Local Dairy Producers, Pakistan',
     'freshness_indicator': 'Tangy and refreshing',
     'product_link':
@@ -146,7 +146,7 @@ List<Map<String, dynamic>> dairyAndEggsDataPakistan = [
   {
     'product_name': 'Evaporated Milk',
     'price': 100,
-    'volume': '400ml',
+    'weight': '400ml',
     'origin': 'Local Dairy Producers, Pakistan',
     'freshness_indicator': 'Rich and creamy',
     'product_link':
@@ -155,7 +155,7 @@ List<Map<String, dynamic>> dairyAndEggsDataPakistan = [
   {
     'product_name': 'Condensed Milk',
     'price': 120,
-    'volume': '400ml',
+    'weight': '400ml',
     'origin': 'Local Dairy Producers, Pakistan',
     'freshness_indicator': 'Sweet and creamy',
     'product_link':
@@ -164,7 +164,7 @@ List<Map<String, dynamic>> dairyAndEggsDataPakistan = [
   {
     'product_name': 'Buffalo Milk',
     'price': 150,
-    'volume': '1 liter',
+    'weight': '1 liter',
     'origin': 'Local Dairy Farms, Pakistan',
     'freshness_indicator': 'Rich and creamy',
     'product_link':

@@ -15,8 +15,19 @@ class _ProductsListScreenState extends State<ProductsListScreen> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text("Name"),
+        title: Text(
+          widget.product['name'],
+          style: TextStyle(
+              fontSize: 17, fontWeight: FontWeight.bold, color: Colors.green),
+        ),
       ),
+      body: ListView.builder(itemBuilder: (context, int index) {
+        return ListTile(
+          leading: CircleAvatar(
+              backgroundImage:
+                  NetworkImage(dataCategory[index]['product_name'])),
+        );
+      }),
     );
   }
 }
