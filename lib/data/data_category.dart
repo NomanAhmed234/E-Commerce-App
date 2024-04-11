@@ -5,6 +5,7 @@ import 'package:e_commerce_app/product_screens/fruit_screen.dart';
 import 'package:e_commerce_app/product_screens/herbs_screen.dart';
 import 'package:e_commerce_app/product_screens/meat_screen.dart';
 import 'package:e_commerce_app/product_screens/pantry_staple_screen.dart';
+import 'package:e_commerce_app/product_screens/snacks_sweets_screen.dart';
 import 'package:e_commerce_app/product_screens/vegetable_screen.dart';
 
 List dataCategory = [
@@ -54,13 +55,13 @@ List dataCategory = [
     "name": "Pantry & Staple",
     "image":
         "https://i.pinimg.com/564x/50/63/e0/5063e00de0d9fcae051d6aac8103a497.jpg",
-    "screen": pantryStapleScreen()
+    "screen": PantryStapleScreen()
   },
   {
     "name": "Snacks & Sweets",
     "image":
         "https://i.pinimg.com/564x/94/90/a0/9490a02fd9f75b617fae5474a17a4175.jpg",
-    "screen": HerbScreen()
+    "screen": SnacksSweetsScreen()
   },
   {
     "name": "Snacks & Sweets",

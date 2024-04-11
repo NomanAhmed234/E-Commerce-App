@@ -27,7 +27,7 @@ List<Map<String, dynamic>> pantryStaplesData = [
   {
     'product_name': 'Bread (Whole Wheat)',
     'price': 50,
-    'quantity': '1 loaf',
+    'weight': '1 loaf',
     'origin': 'Local Bakeries, Pakistan',
     'product_link':
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtc7G3qlDs6VtTLeqi1xx9-bce-TGAIMdPCQ&s',
@@ -246,7 +246,7 @@ List<Map<String, dynamic>> pantryStaplesData = [
   {
     'product_name': 'Cooking Oil (Sunflower)',
     'price': 200,
-    'volume': '5 liters',
+    'weight': '5 liters',
     'origin': 'Local Oil Mills, Pakistan',
     'product_link':
         'https://i.pinimg.com/474x/b1/02/6c/b1026c23a45166492a791c8fc83f39b8.jpg',
@@ -254,7 +254,7 @@ List<Map<String, dynamic>> pantryStaplesData = [
   {
     'product_name': 'Olive Oil (Extra Virgin)',
     'price': 500,
-    'volume': '1 liter',
+    'weight': '1 liter',
     'origin': 'Local Supermarkets, Pakistan',
     'product_link':
         'https://i.pinimg.com/474x/a8/b0/df/a8b0dfbc106c739bb28ce6d79fe4169e.jpg',
@@ -270,7 +270,7 @@ List<Map<String, dynamic>> pantryStaplesData = [
   {
     'product_name': 'Soy Sauce',
     'price': 150,
-    'volume': '500ml',
+    'weight': '500ml',
     'origin': 'Local Supermarkets, Pakistan',
     'product_link':
         'https://i.pinimg.com/474x/ee/f4/81/eef4811f865f7034d2bc6c64ff8eb748.jpg',
@@ -278,7 +278,7 @@ List<Map<String, dynamic>> pantryStaplesData = [
   {
     'product_name': 'Vinegar',
     'price': 80,
-    'volume': '500ml',
+    'weight': '500ml',
     'origin': 'Local Supermarkets, Pakistan',
     'product_link':
         'https://i.pinimg.com/474x/9d/06/2e/9d062e398b48a2d8d865bc647258279f.jpg',
@@ -303,7 +303,7 @@ List<Map<String, dynamic>> pantryStaplesData = [
   {
     'product_name': 'Maple Syrup',
     'price': 400,
-    'volume': '500ml',
+    'weight': '500ml',
     'origin': 'Local Supermarkets, Pakistan',
     'product_link':
         'https://i.pinimg.com/474x/28/9d/32/289d32c5d299723bf967416d277f8760.jpg',
@@ -311,7 +311,7 @@ List<Map<String, dynamic>> pantryStaplesData = [
   {
     'product_name': 'Molasses',
     'price': 150,
-    'volume': '500ml',
+    'weight': '500ml',
     'origin': 'Local Supermarkets, Pakistan',
     'product_link':
         'https://i.pinimg.com/474x/3e/6f/0a/3e6f0a31c15379a706808c08b2127ba1.jpg',
@@ -320,7 +320,7 @@ List<Map<String, dynamic>> pantryStaplesData = [
   {
     'product_name': 'Canned Tomatoes',
     'price': 100,
-    'quantity': '400g',
+    'weight': '400g',
     'origin': 'Local Supermarkets, Pakistan',
     'product_link':
         'https://i.pinimg.com/474x/ab/e5/6f/abe56f826415d02891ab6683a722d879.jpg',
@@ -328,7 +328,7 @@ List<Map<String, dynamic>> pantryStaplesData = [
   {
     'product_name': 'Canned Chickpeas',
     'price': 120,
-    'quantity': '400g',
+    'weight': '400g',
     'origin': 'Local Supermarkets, Pakistan',
     'product_link':
         'https://i.pinimg.com/474x/f4/8e/8f/f48e8f7f28af2798f3f165f812c2b369.jpg',

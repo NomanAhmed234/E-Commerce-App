@@ -4,7 +4,7 @@ List<Map<String, dynamic>> pepsiProductsPakistan = [
     'product_name': 'Pepsi Cola',
     'variant': 'Regular',
     'packaging': 'Bottle',
-    'volume': '500ml',
+    'weight': '500ml',
     'price': 50,
     'origin': 'Pakistan',
     'product_link':
@@ -15,7 +15,7 @@ List<Map<String, dynamic>> pepsiProductsPakistan = [
     'product_name': 'Pepsi Diet',
     'variant': 'Diet',
     'packaging': 'Can',
-    'volume': '330ml',
+    'weight': '330ml',
     'price': 45,
     'origin': 'Pakistan',
     'product_link':
@@ -26,7 +26,7 @@ List<Map<String, dynamic>> pepsiProductsPakistan = [
     'product_name': 'Pepsi ',
     'variant': 'Original',
     'packaging': 'Bottle',
-    'volume': '1.5 liters',
+    'weight': '1.5 liters',
     'price': 70,
     'origin': 'Pakistan',
     'product_link':
@@ -37,7 +37,7 @@ List<Map<String, dynamic>> pepsiProductsPakistan = [
     'product_name': 'Pepsi Black',
     'variant': 'Black',
     'packaging': 'Can',
-    'volume': '330ml',
+    'weight': '330ml',
     'price': 50,
     'origin': 'Pakistan',
     'product_link':
@@ -48,7 +48,7 @@ List<Map<String, dynamic>> pepsiProductsPakistan = [
     'product_name': 'Pepsi Black',
     'variant': 'black',
     'packaging': 'Bottle',
-    'volume': '1 liter',
+    'weight': '1 liter',
     'price': 60,
     'origin': 'Pakistan',
     'product_link':
@@ -60,7 +60,7 @@ List<Map<String, dynamic>> pepsiProductsPakistan = [
     'product_name': 'Pepsi ',
     'variant': 'original',
     'packaging': 'Bottle',
-    'volume': '2.25 liters',
+    'weight': '2.25 liters',
     'price': 70,
     'origin': 'Pakistan',
     'product_link':

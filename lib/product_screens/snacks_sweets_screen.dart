@@ -2,11 +2,16 @@ import 'package:e_commerce_app/data/bakery/bakery_data.dart';
 import 'package:e_commerce_app/data/dairy/dairy_products.dart';
 import 'package:e_commerce_app/data/data_category.dart';
 import 'package:e_commerce_app/data/fresh_produce/fruit_data.dart';
+import 'package:e_commerce_app/data/fresh_produce/herbs_data.dart';
+import 'package:e_commerce_app/data/fresh_produce/vegetable_data.dart';
+import 'package:e_commerce_app/data/meat/meat_seafood_data.dart';
+import 'package:e_commerce_app/data/pantry_staples/pantry_staple_data.dart';
+import 'package:e_commerce_app/data/snacks_sweets/snacks_sweets.dart';
 import 'package:e_commerce_app/single_product_screen.dart';
 import 'package:flutter/material.dart';
 
-class FruitScreen extends StatelessWidget {
-  const FruitScreen({Key? key}) : super(key: key);
+class SnacksSweetsScreen extends StatelessWidget {
+  const SnacksSweetsScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +21,7 @@ class FruitScreen extends StatelessWidget {
         foregroundColor: Colors.green,
         centerTitle: true,
         title: Text(
-          "Fruits",
+          "Snacks & Sweets",
           style: TextStyle(
               color: Colors.green, fontWeight: FontWeight.bold, fontSize: 15),
         ),
@@ -24,12 +29,12 @@ class FruitScreen extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(10),
         child: ListView.builder(
-          itemCount: (freshFruitsDataPakistan.length / 2).ceil(),
+          itemCount: (snacksAndSweetsPakistan.length / 2).ceil(),
           itemBuilder: (context, index) {
             int firstIndex = index * 2;
             int secondIndex = index * 2 + 1;
 
-            bool hasSecondItem = secondIndex < freshFruitsDataPakistan.length;
+            bool hasSecondItem = secondIndex < snacksAndSweetsPakistan.length;
 
             return Padding(
               padding: const EdgeInsets.only(bottom: 8.0),
@@ -43,7 +48,7 @@ class FruitScreen extends StatelessWidget {
                             MaterialPageRoute(
                                 builder: (context) => SingleProductScreen(
                                     data:
-                                        freshFruitsDataPakistan[firstIndex])));
+                                        snacksAndSweetsPakistan[firstIndex])));
                       },
                       child: Card(
                         color: Colors.white,
@@ -70,7 +75,7 @@ class FruitScreen extends StatelessWidget {
                                       child: CircleAvatar(
                                         radius: 40,
                                         backgroundImage: NetworkImage(
-                                            freshFruitsDataPakistan[firstIndex]
+                                            snacksAndSweetsPakistan[firstIndex]
                                                 ['product_link']),
                                       ),
                                     ),
@@ -82,7 +87,7 @@ class FruitScreen extends StatelessWidget {
                               ),
                               // Add your card content here
                               Text(
-                                freshFruitsDataPakistan[firstIndex]
+                                snacksAndSweetsPakistan[firstIndex]
                                     ['product_name'],
                                 style: TextStyle(
                                     fontSize: 13,
@@ -90,7 +95,7 @@ class FruitScreen extends StatelessWidget {
                                     fontWeight: FontWeight.bold),
                               ),
                               Text(
-                                freshFruitsDataPakistan[firstIndex]['weight'],
+                                snacksAndSweetsPakistan[firstIndex]['weight'],
                                 style:
                                     TextStyle(color: Colors.grey, fontSize: 13),
                               ),
@@ -100,7 +105,7 @@ class FruitScreen extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Text(
-                                    "Rs.${freshFruitsDataPakistan[firstIndex]['price']}"
+                                    "Rs.${snacksAndSweetsPakistan[firstIndex]['price']}"
                                         .toString(),
                                     style: TextStyle(
                                         color: Colors.green,
@@ -140,7 +145,7 @@ class FruitScreen extends StatelessWidget {
                               context,
                               MaterialPageRoute(
                                   builder: (context) => SingleProductScreen(
-                                      data: freshFruitsDataPakistan[
+                                      data: snacksAndSweetsPakistan[
                                           secondIndex])));
                         },
                         child: Card(
@@ -168,7 +173,7 @@ class FruitScreen extends StatelessWidget {
                                         child: CircleAvatar(
                                           radius: 40,
                                           backgroundImage: NetworkImage(
-                                              freshFruitsDataPakistan[
+                                              snacksAndSweetsPakistan[
                                                   secondIndex]['product_link']),
                                         ),
                                       ),
@@ -180,7 +185,7 @@ class FruitScreen extends StatelessWidget {
                                 ),
                                 // Add your card content here
                                 Text(
-                                  freshFruitsDataPakistan[secondIndex]
+                                  snacksAndSweetsPakistan[secondIndex]
                                       ['product_name'],
                                   style: TextStyle(
                                       fontSize: 13,
@@ -188,7 +193,7 @@ class FruitScreen extends StatelessWidget {
                                       fontWeight: FontWeight.bold),
                                 ),
                                 Text(
-                                  freshFruitsDataPakistan[secondIndex]
+                                  snacksAndSweetsPakistan[secondIndex]
                                       ['weight'],
                                   style: TextStyle(
                                       color: Colors.grey, fontSize: 13),
@@ -199,7 +204,7 @@ class FruitScreen extends StatelessWidget {
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
                                     Text(
-                                      "Rs.${freshFruitsDataPakistan[secondIndex]['price']}"
+                                      "Rs.${snacksAndSweetsPakistan[secondIndex]['price']}"
                                           .toString(),
                                       style: TextStyle(
                                           color: Colors.green,

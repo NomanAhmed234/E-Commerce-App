@@ -1,9 +1,9 @@
 List<Map<String, dynamic>> mineralWaterProductsPakistan = [
   {
     'brand': 'Nestlé Pure Life',
-    'product_name': 'Nestlé Pure Life Mineral Water',
+    'product_name': 'Nestlé Water',
     'packaging': 'Bottle',
-    'volume': '500ml',
+    'weight': '500ml',
     'price': 50,
     'origin': 'Pakistan',
     'product_link':
@@ -11,9 +11,9 @@ List<Map<String, dynamic>> mineralWaterProductsPakistan = [
   },
   {
     'brand': 'Nestlé Pure Life',
-    'product_name': 'Nestlé Pure Life Mineral Water',
+    'product_name': 'Nestlé Water',
     'packaging': 'Bottle',
-    'volume': '1ltr',
+    'weight': '1ltr',
     'price': 80,
     'origin': 'Pakistan',
     'product_link':
@@ -21,9 +21,9 @@ List<Map<String, dynamic>> mineralWaterProductsPakistan = [
   },
   {
     'brand': 'Aquafina',
-    'product_name': 'Aquafina Mineral Water',
+    'product_name': 'Aquafina Water',
     'packaging': 'Bottle',
-    'volume': '500ml',
+    'weight': '500ml',
     'price': 60,
     'origin': 'Pakistan',
     'product_link':
@@ -31,9 +31,9 @@ List<Map<String, dynamic>> mineralWaterProductsPakistan = [
   },
   {
     'brand': 'Aquafina',
-    'product_name': 'Aquafina Mineral Water',
+    'product_name': 'Aquafina Water',
     'packaging': 'Bottle',
-    'volume': '1 liter',
+    'weight': '1 liter',
     'price': 100,
     'origin': 'Pakistan',
     'product_link':

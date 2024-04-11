@@ -1,6 +1,7 @@
 import 'package:e_commerce_app/data/bakery/bakery_data.dart';
 import 'package:e_commerce_app/data/dairy/dairy_products.dart';
 import 'package:e_commerce_app/data/data_category.dart';
+import 'package:e_commerce_app/single_product_screen.dart';
 import 'package:flutter/material.dart';
 
 class DairyScreen extends StatelessWidget {
@@ -14,7 +15,7 @@ class DairyScreen extends StatelessWidget {
         foregroundColor: Colors.green,
         centerTitle: true,
         title: Text(
-          "Dairy",
+          "Bakery",
           style: TextStyle(
               color: Colors.green, fontWeight: FontWeight.bold, fontSize: 15),
         ),
@@ -27,7 +28,7 @@ class DairyScreen extends StatelessWidget {
             int firstIndex = index * 2;
             int secondIndex = index * 2 + 1;
 
-            bool hasSecondItem = secondIndex < bakeryBreadData.length;
+            bool hasSecondItem = secondIndex < dairyAndEggsDataPakistan.length;
 
             return Padding(
               padding: const EdgeInsets.only(bottom: 8.0),
@@ -36,7 +37,12 @@ class DairyScreen extends StatelessWidget {
                   Expanded(
                     child: GestureDetector(
                       onTap: () {
-                        // Handle tap
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => SingleProductScreen(
+                                    data:
+                                        dairyAndEggsDataPakistan[firstIndex])));
                       },
                       child: Card(
                         color: Colors.white,
@@ -129,7 +135,12 @@ class DairyScreen extends StatelessWidget {
                     Expanded(
                       child: GestureDetector(
                         onTap: () {
-                          // Handle tap
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => SingleProductScreen(
+                                      data: dairyAndEggsDataPakistan[
+                                          secondIndex])));
                         },
                         child: Card(
                           color: Colors.white,
