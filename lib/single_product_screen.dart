@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/cart_screen.dart';
 import 'package:flutter/material.dart';
 
 class SingleProductScreen extends StatefulWidget {
@@ -227,7 +228,16 @@ class _SingleProductScreenState extends State<SingleProductScreen> {
                 width: double.infinity,
                 margin: EdgeInsets.all(10), // Add margin if needed
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => CartScreen(
+                          dataFromSingleProductScreen: widget.data,
+                        ),
+                      ),
+                    );
+                  },
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
