@@ -234,6 +234,7 @@ class _SingleProductScreenState extends State<SingleProductScreen> {
                       MaterialPageRoute(
                         builder: (context) => CartScreen(
                           dataFromSingleProductScreen: widget.data,
+                          dataCounter: counter,
                         ),
                       ),
                     );
