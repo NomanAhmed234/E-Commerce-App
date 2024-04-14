@@ -4,11 +4,10 @@ class CartScreen extends StatefulWidget {
   final Map dataFromSingleProductScreen;
   final int dataCounter;
 
-
   const CartScreen({
     Key? key,
-    required this.dataFromSingleProductScreen, required this.dataCounter,
-    
+    required this.dataFromSingleProductScreen,
+    required this.dataCounter,
   }) : super(key: key);
 
   @override
