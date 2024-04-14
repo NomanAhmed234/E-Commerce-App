@@ -18,7 +18,7 @@ class HerbScreen extends StatelessWidget {
         foregroundColor: Colors.green,
         centerTitle: true,
         title: Text(
-          "Fruits",
+          "Herbs & Fresh",
           style: TextStyle(
               color: Colors.green, fontWeight: FontWeight.bold, fontSize: 15),
         ),

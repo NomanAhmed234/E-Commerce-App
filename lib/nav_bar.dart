@@ -17,7 +17,7 @@ class _MyNavigationBarState extends State<MyNavigationBar> {
   List<Widget> _widgetOptions = <Widget>[
     ShopScreen(),
     ExploreScreen(),
-    // CartScreen(dataFromSingleProductScreen: {},),
+    CartScreen(),
     FavoriteScreen(),
     ProfileScreen()
   ];

@@ -1,13 +1,9 @@
+import 'package:e_commerce_app/data/add_to_cart_data.dart';
 import 'package:flutter/material.dart';
 
 class CartScreen extends StatefulWidget {
-  final Map dataFromSingleProductScreen;
-  final int dataCounter;
-
   const CartScreen({
     Key? key,
-    required this.dataFromSingleProductScreen,
-    required this.dataCounter,
   }) : super(key: key);
 
   @override
@@ -15,14 +11,11 @@ class CartScreen extends StatefulWidget {
 }
 
 class _CartScreenState extends State<CartScreen> {
-  late int dataCounter;
-  late int productPrice;
-
+  late int dataCounter = 1;
+  late int productPrice = 0;
   @override
   void initState() {
     super.initState();
-    dataCounter = widget.dataCounter;
-    productPrice = widget.dataFromSingleProductScreen['price'] * dataCounter;
   }
 
   @override
@@ -34,7 +27,7 @@ class _CartScreenState extends State<CartScreen> {
       body: Padding(
         padding: const EdgeInsets.only(left: 10, right: 10),
         child: ListView.builder(
-          itemCount: 1,
+          itemCount: addToCartData.length,
           itemBuilder: (context, int index) {
             return Column(
               children: [
@@ -52,8 +45,7 @@ class _CartScreenState extends State<CartScreen> {
                           child: CircleAvatar(
                             radius: 40,
                             backgroundImage: NetworkImage(
-                              widget
-                                  .dataFromSingleProductScreen['product_link'],
+                              addToCartData[index]['product_link'],
                             ),
                           ),
                         ),
@@ -63,16 +55,15 @@ class _CartScreenState extends State<CartScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          widget.dataFromSingleProductScreen['product_name'],
+                          addToCartData[index]['product_name'],
                           style: TextStyle(
-                            color: Colors.grey.shade800,
-                            fontSize: 17,
+                            color: Colors.green,
+                            fontSize: 16,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                         Text(
-                          widget.dataFromSingleProductScreen['weight']
-                              .toString(),
+                          addToCartData[index]['weight'].toString(),
                           style: TextStyle(color: Colors.grey),
                         ),
                         Row(
@@ -88,10 +79,9 @@ class _CartScreenState extends State<CartScreen> {
                                       setState(() {
                                         if (dataCounter > 1) {
                                           dataCounter--;
-                                          productPrice =
-                                              widget.dataFromSingleProductScreen[
-                                                      'price'] *
-                                                  dataCounter;
+                                          productPrice = addToCartData[index]
+                                                  ['total_price'] *
+                                              dataCounter;
                                         }
                                       });
                                     },
@@ -112,7 +102,7 @@ class _CartScreenState extends State<CartScreen> {
                                         dataCounter.toString(),
                                         style: TextStyle(
                                           color: Colors.white,
-                                          fontSize: 15,
+                                          fontSize: 13,
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
@@ -123,10 +113,9 @@ class _CartScreenState extends State<CartScreen> {
                                   onPressed: () {
                                     setState(() {
                                       dataCounter++;
-                                      productPrice =
-                                          widget.dataFromSingleProductScreen[
-                                                  'price'] *
-                                              dataCounter;
+                                      productPrice = addToCartData[index]
+                                              ['total_price'] *
+                                          dataCounter;
                                     });
                                   },
                                   icon: Icon(
@@ -146,7 +135,12 @@ class _CartScreenState extends State<CartScreen> {
                       children: [
                         IconButton(
                           padding: EdgeInsets.zero,
-                          onPressed: () {},
+                          onPressed: () {
+                            setState(() {
+                              addToCartData
+                                  .removeAt(index); // Remove item from the list
+                            });
+                          },
                           icon: Icon(
                             Icons.close,
                             color: Colors.grey,
@@ -155,7 +149,7 @@ class _CartScreenState extends State<CartScreen> {
                         Text(
                           "Rs.${productPrice.toString()}",
                           style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 15,
                             fontWeight: FontWeight.bold,
                             color: Colors.grey.shade800,
                           ),

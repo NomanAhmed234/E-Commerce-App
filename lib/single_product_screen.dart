@@ -1,4 +1,8 @@
 import 'package:e_commerce_app/cart_screen.dart';
+import 'package:e_commerce_app/data/add_to_cart_data.dart';
+import 'package:e_commerce_app/data/favorite_data.dart';
+import 'package:e_commerce_app/favorite_screen.dart';
+import 'package:e_commerce_app/product_screens/fruit_screen.dart';
 import 'package:flutter/material.dart';
 
 class SingleProductScreen extends StatefulWidget {
@@ -11,7 +15,7 @@ class SingleProductScreen extends StatefulWidget {
 }
 
 class _SingleProductScreenState extends State<SingleProductScreen> {
-  bool isChange = false;
+  bool isChange = true;
   int counter = 1;
   num totalPrice = 1;
 
@@ -69,6 +73,14 @@ class _SingleProductScreenState extends State<SingleProductScreen> {
                     IconButton(
                         onPressed: () {
                           setState(() {
+                            if (isChange == true) {
+                              favoriteData.add({
+                                'product_name': widget.data['product_name'],
+                                'product_link': widget.data['product_link'],
+                                'weight': widget.data['weight'],
+                                'price': widget.data['price'],
+                              });
+                            }
                             isChange = !isChange;
                           });
                         },
@@ -229,13 +241,23 @@ class _SingleProductScreenState extends State<SingleProductScreen> {
                 margin: EdgeInsets.all(10), // Add margin if needed
                 child: ElevatedButton(
                   onPressed: () {
+                    addToCartData.add({
+                      'product_name': widget.data['product_name'],
+                      'product_link': widget.data['product_link'],
+                      'weight': widget.data['weight'],
+                      'price': widget.data['price'],
+                      'total_price': totalPrice,
+                      'item': counter,
+                    });
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => CartScreen(
-                          dataFromSingleProductScreen: widget.data,
-                          dataCounter: counter,
-                        ),
+                        builder: (context) => 
+                        FruitScreen(),
+                        // CartScreen(
+                        //   dataFromSingleProductScreen: widget.data,
+                        //   dataCounter: counter,
+                        // ),
                       ),
                     );
                   },

@@ -19,7 +19,7 @@ class MeatScreen extends StatelessWidget {
         foregroundColor: Colors.green,
         centerTitle: true,
         title: Text(
-          "Fruits",
+          "Meats & Seafood",
           style: TextStyle(
               color: Colors.green, fontWeight: FontWeight.bold, fontSize: 15),
         ),

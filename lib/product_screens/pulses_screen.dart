@@ -1,11 +1,15 @@
 import 'package:e_commerce_app/data/bakery/bakery_data.dart';
 import 'package:e_commerce_app/data/dairy/dairy_products.dart';
 import 'package:e_commerce_app/data/data_category.dart';
+import 'package:e_commerce_app/data/fresh_produce/fruit_data.dart';
+import 'package:e_commerce_app/data/fresh_produce/herbs_data.dart';
+import 'package:e_commerce_app/data/fresh_produce/vegetable_data.dart';
+import 'package:e_commerce_app/data/pantry_staples/pulses.dart';
 import 'package:e_commerce_app/single_product_screen.dart';
 import 'package:flutter/material.dart';
 
-class DairyScreen extends StatelessWidget {
-  const DairyScreen({Key? key}) : super(key: key);
+class PulseScreen extends StatelessWidget {
+  const PulseScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +19,7 @@ class DairyScreen extends StatelessWidget {
         foregroundColor: Colors.green,
         centerTitle: true,
         title: Text(
-          "Dairy",
+          "Pulses",
           style: TextStyle(
               color: Colors.green, fontWeight: FontWeight.bold, fontSize: 15),
         ),
@@ -23,12 +27,12 @@ class DairyScreen extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(10),
         child: ListView.builder(
-          itemCount: (dairyAndEggsDataPakistan.length / 2).ceil(),
+          itemCount: (pulseData.length / 2).ceil(),
           itemBuilder: (context, index) {
             int firstIndex = index * 2;
             int secondIndex = index * 2 + 1;
 
-            bool hasSecondItem = secondIndex < dairyAndEggsDataPakistan.length;
+            bool hasSecondItem = secondIndex < pulseData.length;
 
             return Padding(
               padding: const EdgeInsets.only(bottom: 8.0),
@@ -41,8 +45,7 @@ class DairyScreen extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                                 builder: (context) => SingleProductScreen(
-                                    data:
-                                        dairyAndEggsDataPakistan[firstIndex])));
+                                    data: pulseData[firstIndex])));
                       },
                       child: Card(
                         color: Colors.white,
@@ -69,7 +72,7 @@ class DairyScreen extends StatelessWidget {
                                       child: CircleAvatar(
                                         radius: 40,
                                         backgroundImage: NetworkImage(
-                                            dairyAndEggsDataPakistan[firstIndex]
+                                            pulseData[firstIndex]
                                                 ['product_link']),
                                       ),
                                     ),
@@ -81,15 +84,14 @@ class DairyScreen extends StatelessWidget {
                               ),
                               // Add your card content here
                               Text(
-                                dairyAndEggsDataPakistan[firstIndex]
-                                    ['product_name'],
+                                pulseData[firstIndex]['product_name'],
                                 style: TextStyle(
                                     fontSize: 13,
                                     color: Colors.green,
                                     fontWeight: FontWeight.bold),
                               ),
                               Text(
-                                dairyAndEggsDataPakistan[firstIndex]['weight'],
+                                pulseData[firstIndex]['weight'],
                                 style:
                                     TextStyle(color: Colors.grey, fontSize: 13),
                               ),
@@ -99,7 +101,7 @@ class DairyScreen extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Text(
-                                    "Rs.${dairyAndEggsDataPakistan[firstIndex]['price']}"
+                                    "Rs.${pulseData[firstIndex]['price']}"
                                         .toString(),
                                     style: TextStyle(
                                         color: Colors.green,
@@ -139,8 +141,7 @@ class DairyScreen extends StatelessWidget {
                               context,
                               MaterialPageRoute(
                                   builder: (context) => SingleProductScreen(
-                                      data: dairyAndEggsDataPakistan[
-                                          secondIndex])));
+                                      data: pulseData[secondIndex])));
                         },
                         child: Card(
                           color: Colors.white,
@@ -167,8 +168,8 @@ class DairyScreen extends StatelessWidget {
                                         child: CircleAvatar(
                                           radius: 40,
                                           backgroundImage: NetworkImage(
-                                              dairyAndEggsDataPakistan[
-                                                  secondIndex]['product_link']),
+                                              pulseData[secondIndex]
+                                                  ['product_link']),
                                         ),
                                       ),
                                     ),
@@ -179,16 +180,14 @@ class DairyScreen extends StatelessWidget {
                                 ),
                                 // Add your card content here
                                 Text(
-                                  dairyAndEggsDataPakistan[secondIndex]
-                                      ['product_name'],
+                                  pulseData[secondIndex]['product_name'],
                                   style: TextStyle(
                                       fontSize: 13,
                                       color: Colors.green,
                                       fontWeight: FontWeight.bold),
                                 ),
                                 Text(
-                                  dairyAndEggsDataPakistan[secondIndex]
-                                      ['weight'],
+                                  pulseData[secondIndex]['weight'],
                                   style: TextStyle(
                                       color: Colors.grey, fontSize: 13),
                                 ),
@@ -198,7 +197,7 @@ class DairyScreen extends StatelessWidget {
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
                                     Text(
-                                      "Rs.${dairyAndEggsDataPakistan[secondIndex]['price']}"
+                                      "Rs.${pulseData[secondIndex]['price']}"
                                           .toString(),
                                       style: TextStyle(
                                           color: Colors.green,

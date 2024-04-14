@@ -5,6 +5,7 @@ import 'package:e_commerce_app/product_screens/fruit_screen.dart';
 import 'package:e_commerce_app/product_screens/herbs_screen.dart';
 import 'package:e_commerce_app/product_screens/meat_screen.dart';
 import 'package:e_commerce_app/product_screens/pantry_staple_screen.dart';
+import 'package:e_commerce_app/product_screens/pulses_screen.dart';
 import 'package:e_commerce_app/product_screens/snacks_sweets_screen.dart';
 import 'package:e_commerce_app/product_screens/vegetable_screen.dart';
 
@@ -64,9 +65,9 @@ List dataCategory = [
     "screen": SnacksSweetsScreen()
   },
   {
-    "name": "Snacks & Sweets",
+    "name": "Pulses",
     "image":
-        "https://i.pinimg.com/564x/94/90/a0/9490a02fd9f75b617fae5474a17a4175.jpg",
-    "screen": HerbScreen()
+        "https://i.pinimg.com/564x/4d/57/0c/4d570c7c524d483a85bee66cc0e5ee67.jpg",
+    "screen": PulseScreen()
   }
 ];
