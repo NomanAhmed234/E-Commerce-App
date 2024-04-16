@@ -23,6 +23,13 @@ class ShopScreen extends StatefulWidget {
 }
 
 class _ShopScreenState extends State<ShopScreen> {
+  final List<String> images = [
+    'https://i.pinimg.com/474x/fb/fb/5c/fbfb5cf43bba49f49c865b8bafb1e46f.jpg',
+    'https://i.pinimg.com/564x/ab/01/9a/ab019ae53ebdab9e2e03e257445c308f.jpg',
+    'https://i.pinimg.com/474x/bd/44/6c/bd446c6f368f7ecad9cfc326a5517470.jpg',
+    'https://i.pinimg.com/564x/49/c2/ed/49c2edea1278cb0783738e8a31bdd246.jpg',
+    // Add more image URLs here
+  ];
   String searchValue = '';
 
   @override
@@ -70,11 +77,26 @@ class _ShopScreenState extends State<ShopScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Card(
-                child: Image.network(
-                  'https://i.pinimg.com/474x/5d/9c/76/5d9c769ce440958fd3df2bd05e31e540.jpg',
-                  height: 100,
-                  width: double.maxFinite,
+              Container(
+                height: 200, // Adjust the height as needed
+                child: PageView.builder(
+                  itemCount: images.length,
+                  itemBuilder: (context, index) {
+                    return Center(
+                      child: Card(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15.0),
+                        ),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(15.0),
+                          child: Image.network(
+                            images[index],
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                    );
+                  },
                 ),
               ),
               Row(

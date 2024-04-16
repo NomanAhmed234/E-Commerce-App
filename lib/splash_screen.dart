@@ -30,11 +30,11 @@ class _AnimatedSplashScreenState extends State<AnimatedSplashScreen>
     // Navigate to the next screen after animation completes
     _animationController.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
-        Navigator.push(
+        Navigator.pushReplacement(
             context,
             MaterialPageRoute(
                 builder: (context) =>
-                   OnboardingScreen())); // Replace '/home' with your desired route
+                    OnboardingScreen())); // Replace '/home' with your desired route
       }
     });
   }

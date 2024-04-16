@@ -26,7 +26,7 @@ class _SingleProductScreenState extends State<SingleProductScreen> {
         appBar: AppBar(
           foregroundColor: Colors.green,
           backgroundColor: Colors.grey.shade200,
-          title: Text("Single Product Screen"),
+          // title: Text("Single Product Screen"),
         ),
         body: SingleChildScrollView(
           child: Column(
@@ -74,13 +74,37 @@ class _SingleProductScreenState extends State<SingleProductScreen> {
                         onPressed: () {
                           setState(() {
                             if (isChange == true) {
-                              favoriteData.add({
-                                'product_name': widget.data['product_name'],
-                                'product_link': widget.data['product_link'],
-                                'weight': widget.data['weight'],
-                                'price': widget.data['price'],
-                              });
+                              // Check if the item is already in the favorite list
+                              bool isAlreadyFavorite = favoriteData.any(
+                                  (item) =>
+                                      item['product_name'] ==
+                                          widget.data['product_name'] &&
+                                      item['product_link'] ==
+                                          widget.data['product_link'] &&
+                                      item['weight'] == widget.data['weight'] &&
+                                      item['price'] == widget.data['price']);
+
+                              // If not already in favorites, add it
+                              if (!isAlreadyFavorite) {
+                                favoriteData.add({
+                                  'product_name': widget.data['product_name'],
+                                  'product_link': widget.data['product_link'],
+                                  'weight': widget.data['weight'],
+                                  'price': widget.data['price'],
+                                });
+                              } else {
+                                // If already in favorites, remove it
+                                favoriteData.removeWhere((item) =>
+                                    item['product_name'] ==
+                                        widget.data['product_name'] &&
+                                    item['product_link'] ==
+                                        widget.data['product_link'] &&
+                                    item['weight'] == widget.data['weight'] &&
+                                    item['price'] == widget.data['price']);
+                              }
                             }
+
+                            // Toggle the state
                             isChange = !isChange;
                           });
                         },
@@ -241,25 +265,29 @@ class _SingleProductScreenState extends State<SingleProductScreen> {
                 margin: EdgeInsets.all(10), // Add margin if needed
                 child: ElevatedButton(
                   onPressed: () {
+                    final snackBar = SnackBar(
+                      backgroundColor: Colors.green,
+                      content:
+                          Text('${widget.data['product_name']} added in Cart'),
+                      duration:
+                          Duration(seconds: 2), // Adjust duration as needed
+                    );
+                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                    // Add item to cart
                     addToCartData.add({
                       'product_name': widget.data['product_name'],
                       'product_link': widget.data['product_link'],
                       'weight': widget.data['weight'],
                       'price': widget.data['price'],
-                      'total_price': totalPrice,
+                      'total_price': widget.data['price'] * counter,
                       'item': counter,
                     });
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => 
-                        FruitScreen(),
-                        // CartScreen(
-                        //   dataFromSingleProductScreen: widget.data,
-                        //   dataCounter: counter,
-                        // ),
-                      ),
-                    );
+
+                    // Show feedback to the user using a dialog
+
+                    // Navigate to the fruit screen with a fade transition
+                    Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: (context) => FruitScreen()));
                   },
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),

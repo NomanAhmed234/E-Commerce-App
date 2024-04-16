@@ -82,8 +82,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             right: 16,
             child: ElevatedButton(
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => MyNavigationBar()));
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => MyNavigationBar()),
+                );
               },
               style: ElevatedButton.styleFrom(
                 foregroundColor: Colors.white,
